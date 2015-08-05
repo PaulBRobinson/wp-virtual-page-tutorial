@@ -7,10 +7,11 @@ Author: Paul Robinson
 Author URI: http://return-true.com
 
 	Copyright (c) 2015 Paul Robinson (http://return-true.com)
-	Virtual Page Tutorial is released under the WTFPL
-	http://www.wtfpl.net/
+	General Public License v2 or later
+	http://www.gnu.org/licenses/gpl-2.0.html
 
 	This is a WordPress plugin (http://wordpress.org).
+	This plugin, like WordPress, is licensed under the GPL.
 
 */
 
