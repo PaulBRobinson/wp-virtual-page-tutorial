@@ -1,6 +1,6 @@
 # Create a Virtual Page in WordPress
 
-This plugin goes along with the a tutorial on Return True. Please check out the [tutorial](http://return-true.com/creating-a-wordpress-plugin-with-composer-and-the-mailgun-api/) for a more indepth look at the code.
+This plugin goes along with the a tutorial on Return True. Please check out the tutorial (Tutorial Coming Soon) for a more indepth look at the code.
 
 This plugin creates a virtual page. However unlike most other implementations I have seen it maintains template loading and allows loading a custom template file either from the plugin directory, or the theme folder.
 
