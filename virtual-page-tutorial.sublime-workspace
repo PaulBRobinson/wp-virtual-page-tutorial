@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"new",
+				"newTemplate"
+			],
+			[
+				"temp",
+				"template_location"
+			],
+			[
+				"get_query_",
+				"get_query_var"
+			],
+			[
+				"get_query",
+				"get_query_var"
+			],
+			[
 				"san",
 				"sanitize_title"
 			],
@@ -498,22 +514,6 @@
 			[
 				"pare",
 				"Parents"
-			],
-			[
-				"st",
-				"student"
-			],
-			[
-				"celebrity",
-				"celebrity_id"
-			],
-			[
-				"getImage",
-				"getImagePath"
-			],
-			[
-				"celebri",
-				"celebrities"
 			]
 		]
 	},
@@ -523,8 +523,32 @@
 			"file": "virtual-page-tutorial.php",
 			"settings":
 			{
-				"buffer_size": 4506,
+				"buffer_size": 1328,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1657,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/template-dump.php",
+			"settings":
+			{
+				"buffer_size": 646,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Server/Tutorials/Vagrant/wp/wp-content/themes/twentyfifteen/style.css",
+			"settings":
+			{
+				"buffer_size": 97179,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -585,6 +609,12 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Paul/AppData/Local/Temp/fz3temp-1/single-property.php",
+		"/C/Server/Tutorials/Vagrant/wp/wp-content/plugins/virtual-page-tutorial/README",
+		"/C/Server/Tutorials/Vagrant/wp/wp-content/plugins/virtual-page-tutorial/LICENSE",
+		"/C/Server/Tutorials/Vagrant/wp/wp-content/plugins/virtual-page-tutorial/.gitignore",
+		"/C/Server/Tutorials/Vagrant/wp/wp-content/themes/twentyfifteen/content.php",
+		"/C/Server/Tutorials/Vagrant/wp/wp-content/themes/twentyfifteen/single.php",
 		"/C/Users/Paul/AppData/Local/Temp/fz3temp-1/functions.php",
 		"/C/Users/Paul/AppData/Local/Temp/fz3temp-1/check-air-ener 2.php",
 		"/C/Users/Paul/AppData/Local/Temp/fz3temp-1/functions-taxonomy.php",
@@ -706,13 +736,7 @@
 		"/C/Server/Tutorials/Vagrant/gamepapers/resources/js/plugins/css/react-select.css",
 		"/C/Server/Tutorials/Vagrant/gamepapers/resources/js/plugins/react-select.js",
 		"/C/Server/Tutorials/Vagrant/gamepapers/app/Http/Controllers/GameController.php",
-		"/C/Server/Tutorials/Vagrant/gamepapers/resources/views/games/create.blade.php",
-		"/C/Server/Tutorials/Vagrant/gamepapers/resources/views/games/create.php",
-		"/C/Server/Tutorials/Vagrant/gamepapers/app/Permission.php",
-		"/C/Server/Tutorials/Vagrant/gamepapers/app/Role.php",
-		"/C/Server/Tutorials/Vagrant/gamepapers/database/seeds/DatabaseSeeder.php",
-		"/C/Server/Tutorials/Vagrant/gamepapers/app/Http/Middleware/ViewThrottleMiddleware.php",
-		"/C/Server/Tutorials/Vagrant/gamepapers/app/Events/IncrementPaperViews.php"
+		"/C/Server/Tutorials/Vagrant/gamepapers/resources/views/games/create.blade.php"
 	],
 	"find":
 	{
@@ -893,7 +917,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -902,20 +926,103 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4506,
+						"buffer_size": 1328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								466,
+								466
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								145,
+								145
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "templates/template-dump.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								646,
+								646
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Server/Tutorials/Vagrant/wp/wp-content/themes/twentyfifteen/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 97179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1089,
+								1035
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,

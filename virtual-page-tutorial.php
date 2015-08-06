@@ -27,11 +27,16 @@ Class VPTutorial {
 	}
 
 	function activate() {
-		flush_rewrite_rules( false );
+		set_transient( 'vpt_flush', 1, 60 );
 	}
 
 	function rewrite() {
 		add_rewrite_endpoint( 'dump', EP_PERMALINK );
+
+		if(get_transient( 'vpt_flush' )) {
+			delete_transient( 'vpt_flush' );
+			flush_rewrite_rules();
+		}
 	}
 
 	function change_template( $template ) {
