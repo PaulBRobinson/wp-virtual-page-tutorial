@@ -22,6 +22,7 @@ Class VPTutorial {
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 
 		add_action( 'init', array( $this, 'rewrite' ) );
+		add_action( 'query_vars', array( $this, 'query_vars' ) );
 		add_action( 'template_include', array( $this, 'change_template' ) );
 
 	}
@@ -32,11 +33,18 @@ Class VPTutorial {
 
 	function rewrite() {
 		add_rewrite_endpoint( 'dump', EP_PERMALINK );
+		add_rewrite_rule( '^the-page$', 'index.php?vptutorial=1', 'top' );
 
 		if(get_transient( 'vpt_flush' )) {
 			delete_transient( 'vpt_flush' );
 			flush_rewrite_rules();
 		}
+	}
+
+	function query_vars($vars) {
+		$vars[] = 'vptutorial';
+
+		return $vars;
 	}
 
 	function change_template( $template ) {
@@ -52,6 +60,20 @@ Class VPTutorial {
 			$newTemplate = plugin_dir_path( __FILE__ ) . 'templates/template-dump.php';
 			if( file_exists( $newTemplate ) )
 				return $newTemplate;
+		}
+
+		if( get_query_var( 'vptutorial', false ) !== false ) {
+
+			$newTemplate = locate_template( array( 'template-vptutorial.php' ) );
+			if( '' != $newTemplate )
+				return $newTemplate;
+
+			//Check plugin directory next
+			$newTemplate = plugin_dir_path( __FILE__ ) . 'templates/template-vptutorial.php';
+			if( file_exists( $newTemplate ) )
+				return $newTemplate;
+
+
 		}
 
 		//Fall back to original template

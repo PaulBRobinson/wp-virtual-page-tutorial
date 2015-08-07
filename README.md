@@ -14,8 +14,15 @@ http://example.com/2014/01/01/sample-post/dump
 
 Will produce a dump instead of the post text normally shown. This is obviously pointless & not advised for production use, but the code used should be sound & helpful if you need to use this kind of thing in production.
 
+### What else does it do?
+This plugin also adds a virtual page using `add_rewrite_rule()` this allows you to make a page that is accessable via any URL you wish to define. This is very useful if you wish to make a page that is completely undeleteable or uneditable via the Wordpress admin but maintaining template loading while doing so. Most other implementations use `exit()` and therefore stop WordPress' execution preventing the active theme from being loaded.
+
+To see the page this plugin generates visit:
+
+http://my-website.com/the-page
+
 ### Version
-0.1
+1.1
 
 ### Installation
 
@@ -26,6 +33,9 @@ git clone https://github.com/Nabesaka/wp-virtual-page-tutorial.git virtual-page-
 ```
 
 Active via the plugins screen then visit a single post & add /dump to the URL. That will show a page, with templates intact, that should give a neat (sort-of) list of the data from `$wp_query->post`. The template provided is for twentyfifteen so it may not work with other templates. It is, however, just a matter of altering your template file.
+
+### Updating
+If you have installed this plugin before the recent update & are pulling the latest copy from Github please make sure to deactivate & reactivate the plugin, or click save on the permalinks settings page to flush rewrite rules or the new page will not be available.
 
 ### License
 
