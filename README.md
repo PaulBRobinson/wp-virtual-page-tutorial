@@ -1,6 +1,6 @@
 # Create a Virtual Page in WordPress
 
-This plugin goes along with the a tutorial on Return True. Please check out the tutorial (Tutorial Coming Soon) for a more indepth look at the code.
+This plugin goes along with the a tutorial on Return True. Please check out the [tutorial](http://return-true.com/creating-a-custom-page-with-wordpress-endpoints/) for a more indepth look at the code.
 
 This plugin creates a virtual page. However unlike most other implementations I have seen it maintains template loading and allows loading a custom template file either from the plugin directory, or the theme folder.
 
@@ -25,7 +25,7 @@ Pretty simple. Just clone into a folder in your WordPress plugin's directory usi
 git clone https://github.com/Nabesaka/wp-virtual-page-tutorial.git virtual-page-tutorial
 ```
 
-Active via the plugins screen then visit
+Active via the plugins screen then visit a single post & add /dump to the URL. That will show a page, with templates intact, that should give a neat (sort-of) list of the data from `$wp_query->post`. The template provided is for twentyfifteen so it may not work with other templates. It is, however, just a matter of altering your template file.
 
 ### License
 

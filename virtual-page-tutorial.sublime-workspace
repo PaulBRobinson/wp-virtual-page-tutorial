@@ -520,10 +520,13 @@
 	"buffers":
 	[
 		{
+			"contents": "<?php\n/*\nPlugin Name: Virtual Page Tutorial\nDescription: Creates a Virtual Page in WordPress while keeping the theme intact\nVersion: 1.0\nAuthor: Paul Robinson\nAuthor URI: http://return-true.com\n\n	Copyright (c) 2015 Paul Robinson (http://return-true.com)\n	General Public License v2 or later\n	http://www.gnu.org/licenses/gpl-2.0.html\n\n	This is a WordPress plugin (http://wordpress.org).\n	This plugin, like WordPress, is licensed under the GPL.\n\n*/\n\nClass VPTutorial {\n\n	function __construct() {\n\n		register_activation_hook( __FILE__, array( $this, 'activate' ) );\n\n		add_action( 'init', array( $this, 'rewrite' ) );\n		add_action( 'template_include', array( $this, 'change_template' ) );\n\n	}\n\n	function activate() {\n		set_transient( 'vpt_flush', 1, 60 );\n	}\n\n	function rewrite() {\n		add_rewrite_endpoint( 'dump', EP_PERMALINK );\n\n		if(get_transient( 'vpt_flush' )) {\n			delete_transient( 'vpt_flush' );\n			flush_rewrite_rules();\n		}\n	}\n\n	function change_template( $template ) {\n\n		if( get_query_var( 'dump', false ) !== false ) {\n\n			//Check theme directory first\n			$newTemplate = locate_template( array( 'template-dump.php' ) );\n			if( '' != $newTemplate )\n				return $newTemplate;\n\n			//Check plugin directory next\n			$newTemplate = plugin_dir_path( __FILE__ ) . 'templates/template-dump.php';\n			if( file_exists( $newTemplate ) )\n				return $newTemplate;\n		}\n\n		//Fall back to original template\n		return $template;\n\n	}\n\n}\n\nnew VPTutorial;",
 			"file": "virtual-page-tutorial.php",
+			"file_size": 1502,
+			"file_write_time": 130833589977468921,
 			"settings":
 			{
-				"buffer_size": 1328,
+				"buffer_size": 1439,
 				"line_ending": "Windows"
 			}
 		},
@@ -917,7 +920,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -926,15 +929,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1328,
+						"buffer_size": 1439,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								466,
-								466
+								754,
+								754
 							]
 						],
 						"settings":
@@ -995,7 +998,8 @@
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
