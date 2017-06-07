@@ -22,7 +22,7 @@ To see the page this plugin generates visit:
 http://my-website.com/the-page
 
 ### Version
-1.1
+1.2
 
 ### Installation
 
