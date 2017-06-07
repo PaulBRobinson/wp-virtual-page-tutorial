@@ -2,7 +2,7 @@
 /*
 Plugin Name: Virtual Page Tutorial
 Description: Creates a Virtual Page in WordPress while keeping the theme intact
-Version: 1.0
+Version: 1.2
 Author: Paul Robinson
 Author URI: http://return-true.com
 
@@ -22,7 +22,7 @@ Class VPTutorial {
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 
 		add_action( 'init', array( $this, 'rewrite' ) );
-		add_action( 'query_vars', array( $this, 'query_vars' ) );
+		add_filter( 'query_vars', array( $this, 'query_vars' ) );
 		add_action( 'template_include', array( $this, 'change_template' ) );
 
 	}
